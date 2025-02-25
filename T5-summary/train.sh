@@ -1,0 +1,15 @@
+python train.py \
+    --pretrained_model "/root/autodl-tmp/google-t5/t5-small/" \
+    --save_dir "/root/autodl-tmp/checkpoints/summary" \
+    --train_path "/root/autodl-tmp/data/summary/train.json" \
+    --dev_path "/root/autodl-tmp/data/summary/dev.json" \
+    --img_log_dir "/root/autodl-tmp/logs/summary" \
+    --img_log_name "/root/autodl-tmp/T5-SMALL" \
+    --batch_size 32 \
+    --max_source_seq_len 1024 \
+    --max_target_seq_len 128 \
+    --learning_rate 2e-5 \
+    --num_train_epochs 1 \
+    --logging_steps 10 \
+    --valid_steps 500 \
+    --device cuda:0
